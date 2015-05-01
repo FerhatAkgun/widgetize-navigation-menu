@@ -87,12 +87,15 @@ nav.widgetized-nav .widgetized-menu .col-xs-12 {
     clear:right;
   }
   nav.widgetized-nav .main-nav li.menu-item-socialMediaIcons a{
-    padding: 8px;
+    padding-top: 10px;
+    padding-left:20px;
+    padding-right:20px;    
+    padding-bottom: 5px;
     border-right: 1px solid rgba(0, 0, 0, 0.2)!important;
     float:left;
   }
     nav.widgetized-nav .main-nav li.menu-item-socialMediaIcons a i{
-    font-size:13px;
+    font-size:20px;
   }
   /*search icon*/
    nav.widgetized-nav .main-nav li.item.menu-item-searchItem .sub-menu.second-level-menu #s{
