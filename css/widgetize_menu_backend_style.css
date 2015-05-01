@@ -3,11 +3,17 @@
 ---------------------------------------------------- */
 #dd_contact-option-container input,
 #dd_facebook-option-container input,
+#dd_googleplus-option-container input,
+#dd_instagram-option-container input,
+#dd_linkedin-option-container input,
 #dd_twitter-option-container input{
 	max-width:450px;
 }
 #dd_contact-option-container label,
 #dd_facebook-option-container label,
+#dd_googleplus-option-container label,
+#dd_instagram-option-container label,
+#dd_linkedin-option-container label,
 #dd_twitter-option-container label{
 width: 100px;
 display: block;

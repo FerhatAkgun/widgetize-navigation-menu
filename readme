@@ -3,7 +3,7 @@ Contributors: FerhatAkgun
 Tags: navigation, dropdown, navigation menu, recent posts, widget, navigation widget, menu widget
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.03
+Stable tag: 1.04
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -115,3 +115,5 @@ Fixed submenu height when switching screen width sizes
 = 1.03 =
 - BIG UPDATE - New "Enable Menu" button allows you to widgetize your navigation menu without needing to edit the code.
 - Changed use of jQuery's window width to window.innerwidth
+= 1.04 =
+- Added support for LinkedIn, Google+ and Instagram

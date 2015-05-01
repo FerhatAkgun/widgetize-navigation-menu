@@ -273,29 +273,58 @@ function widgetize_my_dropdown_menus($menu_name){
 	$count++; 
 endforeach;
 //ADD SOCIAL MEDIA BTNS?
- if ($custom_dropdown_options['contactOptionMenu']!='' || $custom_dropdown_options['facebookOptionMenu']!='' || $custom_dropdown_options['twitterOptionMenu']!='' ){?>
+ if ($custom_dropdown_options['contactOptionMenu']!='' || $custom_dropdown_options['facebookOptionMenu']!='' || $custom_dropdown_options['twitterOptionMenu']!='' 
+			|| $custom_dropdown_options['googleplusOptionMenu']!='' || $custom_dropdown_options['instagramOptionMenu' || $custom_dropdown_options['linkedinOptionMenu']!='']!=''){?>
 <li class="item menu-item-socialMediaIcons" id="menu-item-socialMediaIcons">
-    <?php if ($custom_dropdown_options['contactOptionMenu']!=''){?>
+    
+    <?php if ($custom_dropdown_options['contactOptionMenu']!=''){?>      
       <!--ADD CONTACT BTN?-->
       <a class="title" title="Contact" href="<?php echo $custom_dropdown_options['contactOptionMenu'];?>">
           <i class="icowdgt-contact"></i>
           <span class="wgt-menu-icon-title">Contact</span>
       </a>
     <?php }?>
-    <?php if ($custom_dropdown_options['facebookOptionMenu']!=''){?>
+    
+    <?php if ($custom_dropdown_options['facebookOptionMenu']!=''){?>      
       <!--ADD FACEBOOK BTN?-->
       <a class="title" title="Facebook" target="_blank" href="<?php echo $custom_dropdown_options['facebookOptionMenu'];?>">
           <i class="icowdgt-facebook"></i>
           <span class="wgt-menu-icon-title">Facebook</span>
       </a>
     <?php }?>
-    <?php if ($custom_dropdown_options['twitterOptionMenu']!=''){?>
+    
+    <?php if ($custom_dropdown_options['twitterOptionMenu']!=''){?>      
       <!--ADD TWITTER BTN?-->
       <a class="title" title="Twitter" target="_blank" href="<?php echo $custom_dropdown_options['twitterOptionMenu'];?>">
         <i class="icowdgt-twitter"></i>
         <span class="wgt-menu-icon-title">Twitter</span>
       </a>
     <?php }?>
+
+    <?php if ($custom_dropdown_options['googleplusOptionMenu']!=''){?>      
+      <!--ADD GOOGLE+ BTN?-->
+      <a class="title" title="Google+" target="_blank" href="<?php echo $custom_dropdown_options['googleplusOptionMenu'];?>">
+          <i class="icowdgt-googleplus"></i>
+          <span class="wgt-menu-icon-title">Contact</span>
+      </a>
+    <?php }?>    
+    
+    <?php if ($custom_dropdown_options['instagramOptionMenu']!=''){?>      
+      <!--ADD Instagram BTN?-->
+      <a class="title" title="Instagram" target="_blank" href="<?php echo $custom_dropdown_options['instagramOptionMenu'];?>">
+          <i class="icowdgt-instagram"></i>
+          <span class="wgt-menu-icon-title">Contact</span>
+      </a>
+    <?php }?>
+
+    <?php if ($custom_dropdown_options['linkedinOptionMenu']!=''){?>      
+      <!--ADD LinkedIn BTN?-->
+      <a class="title" title="LinkedIn" target="_blank" href="<?php echo $custom_dropdown_options['linkedinOptionMenu'];?>">
+          <i class="icowdgt-linkedin"></i>
+          <span class="wgt-menu-icon-title">Contact</span>
+      </a>
+    <?php }?>
+        
 </li>
 <?php }//end if add social media button(s)
 //ADD SEARCH BAR?
@@ -427,6 +456,11 @@ function custom_dropdown_options_page() {
         $custom_dropdown_options['contactOptionMenu'] = trim($_POST['contactOptionMenu']);
         $custom_dropdown_options['facebookOptionMenu'] = trim($_POST['facebookOptionMenu']);
         $custom_dropdown_options['twitterOptionMenu'] = trim($_POST['twitterOptionMenu']);
+        
+        $custom_dropdown_options['googleplusOptionMenu'] = trim($_POST['googleplusOptionMenu']);        
+        $custom_dropdown_options['instagramOptionMenu'] = trim($_POST['instagramOptionMenu']);
+        $custom_dropdown_options['linkedinOptionMenu'] = trim($_POST['linkedinOptionMenu']);     
+
         //*SAVE ALL COLORS*//
         $custom_dropdown_options['dd_color_navbar'] = trim($_POST['dd_color_navbar']);
         $custom_dropdown_options['dd_color_main_link'] = trim($_POST['dd_color_main_link']);
@@ -669,24 +703,51 @@ function custom_dropdown_options_page() {
        } ?> name="searchOptionMenu" /> 
     </div>
   <hr class="dd_hr"/>
+  
   <!--CONTACT OPTION-->
   <div id="dd_contact-option-container">
     <label for="contactOptionMenu"><?php _e('Contact link:&nbsp;&nbsp;'); ?></label>
     <input class="widefat" id="contactOptionMenu" name="contactOptionMenu" type="text" value="<?php echo $custom_dropdown_options['contactOptionMenu']; ?>" />
   </div>
   <hr class="dd_hr"/>
+  
   <!--FACEBOOK OPTION-->
    <div id="dd_facebook-option-container">
     <label for="facebookOptionMenu"><?php _e('Facebook link:&nbsp;&nbsp;'); ?></label>
     <input class="widefat" id="facebookOptionMenu" name="facebookOptionMenu" type="text" value="<?php echo $custom_dropdown_options['facebookOptionMenu']; ?>" />
   </div>
   <hr class="dd_hr"/>
+  
   <!--TWITTER OPTION-->
    <div id="dd_twitter-option-container">
     <label for="twitterOptionMenu"><?php _e('Twitter link:&nbsp;&nbsp;'); ?></label>
     <input class="widefat" id="twitterOptionMenu" name="twitterOptionMenu" type="text" value="<?php echo $custom_dropdown_options['twitterOptionMenu']; ?>" />
   </div>
   <hr class="dd_hr"/>
+
+  <!--LinkedIn OPTION-->
+   <div id="dd_linkedin-option-container">
+    <label for="linkedinOptionMenu"><?php _e('LinkedIn link:&nbsp;&nbsp;'); ?></label>
+    <input class="widefat" id="linkedinOptionMenu" name="linkedinOptionMenu" type="text" value="<?php echo $custom_dropdown_options['linkedinOptionMenu']; ?>" />
+  </div>
+  <hr class="dd_hr"/>  
+
+  <!--Google+ OPTION-->
+   <div id="dd_googleplus-option-container">
+    <label for="googleplusOptionMenu"><?php _e('Google+ link:&nbsp;&nbsp;'); ?></label>
+    <input class="widefat" id="googleplusOptionMenu" name="googleplusOptionMenu" type="text" value="<?php echo $custom_dropdown_options['googleplusOptionMenu']; ?>" />
+  </div>
+  <hr class="dd_hr"/> 
+  
+  <!--Instagram OPTION-->
+   <div id="dd_instagram-option-container">
+    <label for="instagramOptionMenu"><?php _e('Instagram link:&nbsp;&nbsp;'); ?></label>
+    <input class="widefat" id="instagramOptionMenu" name="instagramOptionMenu" type="text" value="<?php echo $custom_dropdown_options['instagramOptionMenu']; ?>" />
+  </div>
+  <hr class="dd_hr"/>   
+    
+  
+  
   <!--COLOR OPTIONS-->
   <div id="dd_color-option-container" class="dd_option-container">
     <div class="dd_option-header"><span style="float:left">Colors:&nbsp;&nbsp;</span><span class="dd_option-arrow"></span></div>

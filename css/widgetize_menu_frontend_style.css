@@ -166,6 +166,18 @@ opacity: 0.70;
 .icowdgt-twitter:before {
   content: "\e605";
 }
+.icowdgt-home:before {
+  content: "\e901";
+}
+.icowdgt-googleplus:before {
+  content: "\ea89";
+}
+.icowdgt-instagram:before {
+  content: "\ea90";
+}
+.icowdgt-linkedin:before {
+  content: "\eac8";
+}
 
 @media screen and (min-width: 900px) {
   nav.widgetized-nav.navWidth-navBar{
